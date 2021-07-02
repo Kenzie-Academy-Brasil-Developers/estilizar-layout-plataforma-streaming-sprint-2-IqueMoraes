@@ -10,6 +10,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://kit.fontawesome.com/6c4673f01c.js" crossorigin="anonymous"></script>
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" /> 
@@ -18,68 +19,70 @@
 	
 	<!-- CABEÇALHO -->
 	<header class="topo">
-		<figure>
+		<figure class="kenzieflix__logo">
 			<img src="img/logo.png" alt="Kenzieflix">
-			<figcaption>Kenzieflix</figcaption>
+			<figcaption class="usuarios__legenda">Kenzieflix</figcaption>
 		</figure>
 	</header>
 
 	<!-- PÁGINA INICIAL -->
 	<div class="pg-home">
 		
-		<section>
+		<section class="paginaInicial">
 
-			<header>
-				<h2>Quem está assistindo?</h2>
+			<header class="assistindo">
+				<h2 class="assistindo__titulo">Quem está assistindo?</h2>
 			</header>
 
 			<!-- LISTA DE USUÁRIOS -->
-			<ul>
+			<ul class="usuarios">
 				
 				<!-- USUÁRIO 1 -->
-				<li>
-					<figure>
-						<img src="img/avatar.png" alt="Gabriel">
-						<figcaption>Gabriel</figcaption>
+				<li class="usuarios__lista">
+					<figure class="usuarios__avatar avatar1">
+						<img src="img/avatar.png" alt="Gabriel" class="avatar__imagem">
+						<figcaption class="usuarios__legenda">Gabriel</figcaption>
 					</figure>
 
-					<h3>Gabriel</h3>
+					<h3 class="usuarios__nome">Gabriel</h3>
 				</li>
 				
 				<!-- USUÁRIO 2 -->
-				<li>
-					<figure>
-						<img src="img/avatar1.png" alt="Maria">
-						<figcaption>Maria</figcaption>
+				<li class="usuarios__lista">
+					<figure class="usuarios__avatar avatar2">
+						<img src="img/avatar1.png" alt="Maria" class="avatar__imagem">
+						<figcaption class="usuarios__legenda">Maria</figcaption>
 					</figure>
 
-					<h3>Maria</h3>
+					<h3 class="usuarios__nome">Maria</h3>
 				</li>
 				
 				<!-- USUÁRIO 3 -->
-				<li>
-					<figure>
-						<img src="img/avatar2.png" alt="Renato">
-						<figcaption>Renato</figcaption>
+				<li class="usuarios__lista">
+					<figure class="usuarios__avatar avatar3">
+						<img src="img/avatar2.png" alt="Renato" class="avatar__imagem">
+						<figcaption class="usuarios__legenda">Renato</figcaption>
 					</figure>
 
-					<h3>Renato</h3>
+					<h3 class="usuarios__nome">Renato</h3>
 				</li>
 
 				<!-- ADICIONAR PERFIL-->
-				<li class="addPerfil">
-					<figure>
-						<img src="img/plus-sign.png" alt="Adicionar perfil">
-						<figcaption>Adicionar perfil</figcaption>
-					</figure>
+				<li class="usuarios__lista lista--addPerfil">
+					<div class="caixa__addPerfil">
+						<figure class="usuarios__avatar avatar--addPerfil">
+						<img src="img/plus-sign.png" alt="Adicionar perfil" class="avatar__imagem imagem--addPerfil">
+						<figcaption class="usuarios__legenda">Adicionar perfil</figcaption>
+						</figure>
+					</div>
 
-					<h3>Adicionar perfil</h3>
+					<h3 class="usuarios__nome nome--addPerfil">Adicionar perfil</h3>
 				</li>
 
 			</ul>
 
-			<footer>
-				<button>Gerenciar Perfis</button>
+			<footer class="footer">
+				<button class="footer__botao">Gerenciar Perfis</button>
 			</footer>
 
 		</section>

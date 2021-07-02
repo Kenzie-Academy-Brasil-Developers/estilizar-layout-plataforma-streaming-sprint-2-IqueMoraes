@@ -16,23 +16,239 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
+	--corPrincipalFonte: white;
+	--tamanhoFonteMaisUsada: 20px;
+	--tamanhoAvatar: 186px;
   
 }
 
+
+								html, body, div, span, applet, object, iframe,
+								h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+								a, abbr, acronym, address, big, cite, code,
+								del, dfn, em, img, ins, kbd, q, s, samp,
+								small, strike, strong, sub, sup, tt, var,
+								b, u, i, center,
+								dl, dt, dd, ol, ul, li,
+								fieldset, form, label, legend,
+								table, caption, tbody, tfoot, thead, tr, th, td,
+								article, aside, canvas, details, embed, 
+								figure, figcaption, footer, header, hgroup, 
+								menu, nav, output, ruby, section, summary,
+								time, mark, audio, video {
+									margin: 0;
+									padding: 0;
+									border: 0;
+									font-size: 100%;
+									font: inherit;
+									vertical-align: baseline;
+								}
+								/* HTML5 display-role reset for older browsers */
+								article, aside, details, figcaption, figure, 
+								footer, header, hgroup, menu, nav, section {
+									display: block;
+								}
+								body {
+									line-height: 1;
+								}
+								ol, ul {
+									list-style: none;
+								}
+								blockquote, q {
+									quotes: none;
+								}
+								blockquote:before, blockquote:after,
+								q:before, q:after {
+									content: '';
+									content: none;
+								}
+								table {
+									border-collapse: collapse;
+									border-spacing: 0;
+								}
+
 /*BODY*/
 	body{
-
+		background: #000000;
+background: -moz-linear-gradient(top, #000000 0%, #00002E 8%, #00002E 100%);
+background: -webkit-linear-gradient(top, #000000 0%, #00002E 8%, #00002E 100%);
+background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		color: var(--corPrincipalFonte);
 	}
 
 /*TOPO*/
 	header.topo{
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		
+	}
+	.kenzieflix__logo {
+		flex:1;
+		
 		
 	}
 
 /*RODAPÉ*/
+
+	.footer__botao {
+		margin:20px;
+		height: 62px;
+		width: 220px;
+		background-color: #00002E;
+		color: var(--corPrincipalFonte);
+		font-size: var(--tamanhoFonteMaisUsada);
+		border-radius: 4px;
+		border: 1px solid var(--corPrincipalFonte);
+	}
+
+	.footer__botao:hover {
+		border: 2px solid var(--corPrincipalFonte);
+	}
+
+
 	
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
-		
+		width: 100%;
 	}
+
+	.paginaInicial {
+		display:flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+
+	.assistindo {
+		margin: 30px;
+		font-weight: bold;
+		font-size: 60px;
+		text-align: center;
+
+	}
+
+	.usuarios {
+		margin: 30px;
+		width: 429px;;
+		display:flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+	.usuarios__lista {
+		flex: 1;
+		width: var(--tamanhoAvatar);
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+	}
+
+	.usuarios__avatar {
+		width: var(--tamanhoAvatar);
+
+	}
+
+	.avatar__imagem {
+		width: var(--tamanhoAvatar);
+		border-radius: 3px;
+
+	}
+
+	.avatar__imagem:hover {
+		border:1px solid var(--corPrincipalFonte);
+	}
+	.usuarios__legenda {
+		display:none;
+	}
+
+	.usuarios__nome {
+		margin: 25px 0;
+		width: 100%;
+		font-size:var(--tamanhoFonteMaisUsada);
+		text-align: center;
+	}
+
+
+
+
+	.caixa__addPerfil {
+		height: var(--tamanhoAvatar);
+		width: var(--tamanhoAvatar);
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+
+	}
+	.caixa__addPerfil:hover .imagem--addPerfil{
+		border: none;
+		filter: brightness(2);
+	}
+	.avatar--addPerfil {
+		flex:1;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+	}
+	
+	.imagem--addPerfil {
+		width: calc(var(--tamanhoAvatar) / 2);
+		flex: 1;
+
+	}
+
+
+
+
+
+
+
+/*EXTRAS*/
+@media screen and (min-width: 1025px) {
+
+	/*TOPO*/
+	header.topo{
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+	}
+	.kenzieflix__logo {
+		flex:1;	
+	}
+
+	/*PÁGINA INICIAL*/
+
+	.assistindo {
+		font-size: 70px;
+	}
+
+	.usuarios {
+		margin: 30px;
+		width: 858px;;
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+
+}
