@@ -69,10 +69,14 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /*BODY*/
 	body{
+		height: 100vh;
+		width: 100vw;
 		background: #000000;
 background: -moz-linear-gradient(top, #000000 0%, #00002E 8%, #00002E 100%);
 background: -webkit-linear-gradient(top, #000000 0%, #00002E 8%, #00002E 100%);
 background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 		color: var(--corPrincipalFonte);
 	}
@@ -87,8 +91,9 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 		align-items: center;
 		
 	}
-	.kenzieflix__logo {
-		flex:1;
+	.kenzieflix__logo img{
+		width: 250px;
+
 		
 		
 	}
@@ -115,7 +120,8 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
-		width: 100%;
+		width: 100vw;
+
 	}
 
 	.paginaInicial {
@@ -129,10 +135,12 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 
 	.assistindo {
 		margin: 30px;
+	}
+	.assistindo__titulo {
 		font-weight: bold;
-		font-size: 60px;
+		font-size: 45px;
 		text-align: center;
-
+		white-space: nowrap;
 	}
 
 	.usuarios {
@@ -163,15 +171,17 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 
 	.avatar__imagem {
 		width: var(--tamanhoAvatar);
+		border: 1px solid #00002E;
 		border-radius: 3px;
 
 	}
 
 	.avatar__imagem:hover {
-		border:1px solid var(--corPrincipalFonte);
+		border-color: var(--corPrincipalFonte);
 	}
 	.usuarios__legenda {
-		display:none;
+		/* display:none; */
+		visibility: hidden;
 	}
 
 	.usuarios__nome {
@@ -183,15 +193,19 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 
 
 
-
+	.lista--addPerfil {
+		width: 214,5px;
+		height: 278px;
+	}
 	.caixa__addPerfil {
-		height: var(--tamanhoAvatar);
-		width: var(--tamanhoAvatar);
+		width: 100%;
+		height: 100%;
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
+		border: 1px solid transparent;
 
 
 	}
@@ -199,8 +213,11 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 		border: none;
 		filter: brightness(2);
 	}
+
+
 	.avatar--addPerfil {
 		flex:1;
+		height: 208px;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
@@ -210,7 +227,8 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 	}
 	
 	.imagem--addPerfil {
-		width: calc(var(--tamanhoAvatar) / 2);
+		width: 50%;
+		object-fit: contain;
 		flex: 1;
 
 	}
@@ -222,7 +240,7 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 
 
 /*EXTRAS*/
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
 	/*TOPO*/
 	header.topo{
@@ -239,6 +257,10 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 	.assistindo {
 		font-size: 70px;
 	}
+	.assistindo__titulo {
+		font-size: 70px;
+
+	}
 
 	.usuarios {
 		margin: 30px;
@@ -248,6 +270,16 @@ background: linear-gradient(to bottom, #000000 0%, #00002E 8%, #00002E 100%);
 		justify-content: center;
 		align-items: center;
 		align-content: center;
+	}
+
+	div.pg-home{
+		width: 100vw;
+		height: 85%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+
 	}
 
 
