@@ -138,7 +138,7 @@ background-attachment: fixed;
 	}
 	.assistindo__titulo {
 		font-weight: bold;
-		font-size: 45px;
+		font-size: 35px;
 		text-align: center;
 		white-space: nowrap;
 	}
@@ -147,7 +147,7 @@ background-attachment: fixed;
 		margin: 30px;
 		width: 429px;;
 		display:flex;
-		flex-flow: row wrap;
+		flex-flow: column wrap;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
@@ -240,6 +240,24 @@ background-attachment: fixed;
 
 
 /*EXTRAS*/
+@media screen and (min-width: 768px) {
+	.assistindo__titulo {
+
+		font-size: 45px;
+
+	}
+
+	.usuarios {
+		margin: 30px;
+		width: 429px;;
+		display:flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 
 	/*TOPO*/
